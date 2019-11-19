@@ -1,9 +1,9 @@
-DateFormater Library
-====================
+DateTimeFormatter Library
+=========================
 
-Предоставляет классы для форматирования дат в удобном для чтения формате.
+Provides classes for formatting dates and time in a readable format. 
 
-Например, следующий код
+For example, the following code
 
 ```
 DateFormaterHumanReadable *formater = new DateFormaterHumanReadable();
@@ -33,21 +33,21 @@ qDebug() << formater->format(QDateTime::currentDateTime(),
                              QDateTime::currentDateTime().addYears(1).addSecs(3600));
 ```
 
-выводит
+displays
 
 ```
-"неопределенная дата" 
-"сегодня" 
-"вчера" 
-"завтра" 
-"сегодня в 14:58:55" 
-"20 апреля 2015" 
- 
-"неопределенный период" 
-"с 20 по 21 марта 2015" 
-"с 20 марта по 20 апреля 2015" 
-"с 20 марта 2015 по 20 марта 2016" 
-"с 14:58:55 до 15:58:55 20 марта 2015" 
-"с 14:58:55 20 марта до 15:58:55 21 марта 2015" 
-"с 14:58:55 20 марта 2015 до 15:58:55 20 марта 2016" 
+"undefined date"
+"today"
+"yesterday"
+"tomorrow"
+"today in 20:49"
+"19 december 2019"
+
+"undefined period"
+"from 19 to 20 november 2019"
+"from 19 november to 19 december 2019"
+"from 19 november 2019 to 19 november 2020"
+"from 20:49 to 21:49 19 november 2019"
+"from 20:49 19 november to 21:49 20 november 2019"
+"from 20:49 19 november 2019 to 21:49 19 november 2020"
 ```
